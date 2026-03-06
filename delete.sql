@@ -1,21 +1,10 @@
--- UPDATE
+-- DELETE
+SELECT * FROM job;
 
-SELECT * FROM account;
-UPDATE account
-SET last_login = created_on;
+INSERT INTO job(job_name)
+VALUES
+('Cowboy');
 
-
-SELECT * FROM account_job;
-
-UPDATE account_job
-SET hire_date = account.created_on
-FROM account
-WHERE account_job.user_id = account.user_id;
-
-UPDATE account 
-SET last_login = CURRENT_TIMESTAMP
-RETURNING email;
-
-
-
-
+DELETE FROM job
+WHERE job_name = 'Cowboy'
+RETURNING job_id,job_name;
