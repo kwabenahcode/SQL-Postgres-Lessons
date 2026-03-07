@@ -1,0 +1,16 @@
+-- ASSESSMENT 3
+
+CREATE TABLE teachers(
+	teacher_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(100) NOT NULL,
+	last_name VARCHAR(100) NOT NULL,
+	homeroom_number VARCHAR(100) NOT NULL,
+	department VARCHAR(50) NOT NULL,
+	email VARCHAR(50) UNIQUE NOT NULL,
+	phone VARCHAR(20) UNIQUE NOT NULL
+)
+
+CREATE TABLE students(
+
+)
+
